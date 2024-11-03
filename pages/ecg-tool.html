@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="ECG tool" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>POC ECG tool</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/styles/ecg-tool.css"
+    />
+  </head>
+
+  <body>
+    <header class="header-simple">
+      <div class="section-inner pt-10 pb-10 pos-rel"></div>
+    </header>
+    <section class="nri-edge pt-20">
+      <div
+        style="position: relative; /* height: height,
+          width: width */"
+      >
+        <img class="" id="ecg_image" src="" draggable="false" alt="img" />
+
+        <div
+          id="image_cropBox"
+          ref="{boxRef}"
+          class=""
+          style="
+            position: absolute;
+            pointer-events: none;
+            opacity: 1;
+            border: 1px solid blue;
+            background-color: white;
+            background-repeat: no-repeat;
+          "
+        >
+          <div
+            id="magnifier_left_marker"
+            style="
+              position: absolute;
+              top: 0px;
+              z-index: 9;
+              cursor: pointer;
+              width: 2px;
+              border-left: 2px;
+              background-color: black;
+            "
+          ></div>
+          <div
+            id="magnifier_right_marker"
+            style="
+              position: absolute;
+              top: 0px;
+              z-index: 9;
+              cursor: pointer;
+              width: 2px;
+              border-left: 2px;
+              background-color: black;
+            "
+          ></div>
+        </div>
+        <!-- Left Resize Handle  -->
+        <div
+          class="resize-handle-left"
+          id="resize_handle_left"
+          style="
+            position: absolute;
+            z-index: 9;
+            cursor: pointer;
+            width: fit-content;
+          "
+        >
+          L
+        </div>
+        <!-- Right Resize Handle  -->
+        <div
+          className="resize-handle-right"
+          id="resize_handle_right"
+          draggable="false"
+          style="
+            position: absolute;
+            z-index: 9;
+            cursor: pointer;
+            width: fit-content;
+          "
+        >
+          R
+        </div>
+      </div>
+    </section>
+
+    <!-- javascript files -->
+    <script
+      src="../assets/scripts/jquery-3.6.3.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="../assets/scripts/ecg-tool.js" type="text/javascript"></script>
+  </body>
+</html>

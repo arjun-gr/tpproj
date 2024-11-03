@@ -1,0 +1,11 @@
+.resize-handle-left {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+}
+
+.resize-handle-right {
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+}
